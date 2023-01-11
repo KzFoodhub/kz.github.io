@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kz's-Foodhub</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="logo">
+			<a href="#"><img src="logonikz.png" </a>
+		</div>
+		
+		<nav>
+			<ul> 
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="shorts.html">FOODS</a></li>
+				<li><a href="tshirt.html">CONTACTS</a></li>	
+			</ul>
+			<button> Cart</button>
+		</nav>
+		
+		<h2>Products</h2>
+		<div class="images">
+			<img height="200px" width="200px"
+			src="burger.jpeg">
+			<img height="200px" width="200px"
+			src="carbonarra.jpeg">
+			<img height="200px" width="200px"
+			src="spaghetti.jpeg">
+			
+		</div>
+				
+				<h2>Products Slideshow</h2>
+				<div class="slideshow-container">
+ 					<div class="mySlides1">
+   					<img src="p1.jpeg" style="width:100%">
+ 					</div>
+
+  					<div class="mySlides1">
+   					<img src="p2.jpeg" style="width:100%">
+  					</div>
+
+  					<div class="mySlides1">
+    				<img src="p3.jpeg" style="width:100%">
+  					</div>
+
+  					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+				</div>
+		<script>
+			let slideIndex = [1,1];
+			let slideId = ["mySlides1", "mySlides2"]
+			showSlides(1, 0);
+			showSlides(1, 1);
+
+			function plusSlides(n, no) {
+  				showSlides(slideIndex[no] += n, no);
+			}
+
+			function showSlides(n, no) {
+  			let i;
+ 			let x = document.getElementsByClassName(slideId[no]);
+  			if (n > x.length) {slideIndex[no] = 1}    
+  			if (n < 1) {slideIndex[no] = x.length}
+  			for (i = 0; i < x.length; i++) {
+     		x[i].style.display = "none";  
+ 			}
+ 				x[slideIndex[no]-1].style.display = "block";  
+			}			
+		</script>	
+	</div>	
+
+</body>
+</html>
